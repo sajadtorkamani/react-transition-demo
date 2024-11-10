@@ -10,13 +10,15 @@ const WithoutTransitionExample: React.FC = () => {
   const [tab, setTab] = useState('about')
   const [isPending, startTransition] = useTransition()
 
+  console.log({ isPending })
+
   return (
     <PageLayout title="With Transition Example">
       <Alert variant="success" className="mb-4">
         <>
           Click on the 'Posts (slow)' tab and then click on the 'Contacts' tab.
-          You'll notice that the UI becomes blocked for about ~5 seconds and
-          then 'Contacts' tab shows.
+          You'll notice that the UI doesn't get blocked and the 'Contacts' tab
+          shows immediately.
         </>
       </Alert>
 
