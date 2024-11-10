@@ -20,10 +20,6 @@ const Header: React.FC = () => {
             <NavLink to={ROUTES.home} className="nav-link">
               Home
             </NavLink>
-
-            <NavLink to={ROUTES.about} className="nav-link">
-              About
-            </NavLink>
           </Nav>
         </Navbar.Collapse>
       </Container>
