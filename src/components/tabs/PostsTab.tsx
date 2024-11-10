@@ -5,7 +5,7 @@ const PostsTab: React.FC = () => {
 
   console.log('PostsTab: Rendering 5 posts')
 
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 4; i++) {
     posts.push(<SlowPostsTab key={i} index={i} />)
   }
 

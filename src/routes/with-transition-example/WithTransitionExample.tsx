@@ -10,8 +10,6 @@ const WithoutTransitionExample: React.FC = () => {
   const [tab, setTab] = useState('about')
   const [isPending, startTransition] = useTransition()
 
-  console.log({ isPending })
-
   return (
     <PageLayout title="With Transition Example">
       <Alert variant="success" className="mb-4">
@@ -22,8 +20,13 @@ const WithoutTransitionExample: React.FC = () => {
         </>
       </Alert>
 
+      <Alert variant="info" className="my-3">
+        isPending: {isPending ? 'YES' : 'NO'}
+      </Alert>
+
       <div className="d-flex gap-3 mb-3">
         <Button onClick={() => setTab('about')}>About</Button>
+
         <Button
           className="d-flex gap-2 align-items-center"
           onClick={() => {
@@ -35,6 +38,7 @@ const WithoutTransitionExample: React.FC = () => {
           Posts (slow)
           {isPending && <Spinner size="sm" />}
         </Button>
+
         <Button onClick={() => setTab('contacts')}>Contacts</Button>
       </div>
 
