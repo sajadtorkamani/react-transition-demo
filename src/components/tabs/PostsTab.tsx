@@ -25,9 +25,9 @@ const SlowPostsTab: React.FC<{ index: number }> = ({ index }) => {
 }
 
 function sleepSync(milliseconds: number) {
-  const start = Date.now()
-  while (Date.now() - start < milliseconds) {
-    // Busy-wait loop doing nothing
+  const startTime = performance.now()
+  while (performance.now() - startTime < milliseconds) {
+    // Do nothing for `milliseconds`
   }
 }
 
