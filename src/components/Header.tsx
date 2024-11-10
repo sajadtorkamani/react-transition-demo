@@ -10,15 +10,19 @@ const Header: React.FC = () => {
   return (
     <Navbar expand="lg" className="bg-body-tertiary" data-bs-theme="dark">
       <Container>
-        <Link to={ROUTES.home} className="navbar-brand">
+        <Link to={ROUTES.withoutTransitionExample} className="navbar-brand">
           {APP_NAME}
         </Link>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <NavLink to={ROUTES.home} className="nav-link">
-              Home
+            <NavLink to={ROUTES.withoutTransitionExample} className="nav-link">
+              Without Transition ❌
+            </NavLink>
+
+            <NavLink to={ROUTES.withTransitionExample} className="nav-link">
+              With Transition ✅
             </NavLink>
           </Nav>
         </Navbar.Collapse>

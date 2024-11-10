@@ -1,5 +1,6 @@
-export const APP_NAME = '<App-Name>'
+export const APP_NAME = 'React Transition Demo'
 
 export const ROUTES = {
-  home: '/',
+  withoutTransitionExample: '/without-transition-example',
+  withTransitionExample: '/with-transition-example',
 }
